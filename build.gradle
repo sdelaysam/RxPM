@@ -1,11 +1,11 @@
 buildscript {
-    ext.kotlinVersion = '1.3.50'
+    ext.kotlinVersion = '1.3.61'
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.1'
+        classpath 'com.android.tools.build:gradle:3.5.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     }
 }
@@ -14,6 +14,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
 }
 
@@ -22,7 +23,7 @@ task clean(type: Delete) {
 }
 
 ext {
-    minSdkVersion = 16
+    minSdkVersion = 14
     compileSdkVersion = 29
     targetSdkVersion = 29
     rxBindingVersion = '3.0.0'
@@ -40,7 +41,7 @@ ext {
     rxBinding = "com.jakewharton.rxbinding3:rxbinding:$rxBindingVersion"
     rxBindingAppCompat = "com.jakewharton.rxbinding3:rxbinding-appcompat:$rxBindingVersion"
 
-    conductor = "com.bluelinelabs:conductor:3.0.0-rc2"
+    conductor = "com.github.sdelaysam.conductor:conductor:3.0.2"
 
     junitKotlin = "org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion"
     mockitoKotlin = 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0'
