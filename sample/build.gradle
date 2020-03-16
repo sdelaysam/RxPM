@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "me.dmdev.rxpm.sample"
-        minSdkVersion rootProject.minSdkVersion
+        minSdkVersion 21
         targetSdkVersion rootProject.targetSdkVersion
         vectorDrawables.useSupportLibrary = true
         versionCode 1
@@ -36,6 +36,7 @@ dependencies {
 
     // Rx
     implementation rootProject.rxAndroid2
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
 
     // RxBindings
     implementation rootProject.rxBinding
